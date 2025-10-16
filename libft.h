@@ -12,7 +12,10 @@
 
 #ifndef libft_h
 #define libft_h
+#include <stddef.h>
 int ft_isalpha(int c);
 int ft_isdigit(int c);
 int ft_isalnum(int c);
+void	*ft_memset(void *dest, int c, size_t len);
+void	ft_bzero(void *dest, size_t len);
 #endif
