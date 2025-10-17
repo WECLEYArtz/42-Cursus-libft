@@ -18,4 +18,6 @@ int ft_isdigit(int c);
 int ft_isalnum(int c);
 void	*ft_memset(void *dest, int c, size_t len);
 void	ft_bzero(void *dest, size_t len);
+size_t	ft_strlen(const char *s);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 #endif
