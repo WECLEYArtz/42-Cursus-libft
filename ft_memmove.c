@@ -42,27 +42,24 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // dst - src > 0: src behind, start from begining
 // dst - src < 0: src advanced , start from  its end
 
-
-#include <stdio.h>
-#include <string.h>
-
-int	main(void)
-{
-	int		len;
-	char	test_str[100] = "0123456789abcdefghijklmnopqrstuvwxzy";
-	char	test_target[100];
-
-	char *src = test_target + 10;
-	char *dest = test_target;
-	len = 3;
-
-	strcpy(test_target, test_str);
-
-	memmove(dest, src, len);
-	printf("memmset():\t%s\n\n", test_target);
-
-	strcpy(test_target, test_str);
-
-	ft_memmove(dest, src, len);
-	printf("ft_memmset():\t%s\n\n", test_target);
-}
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	int		len;
+// 	char	test_str[100] = "0123456789abcdefghijklmnopqrstuvwxzy";
+// 	char	test_target[100];
+// 	char	*src;
+// 	char	*dest;
+//
+// 	src = test_target + 10;
+// 	dest = test_target;
+// 	len = 3;
+// 	strcpy(test_target, test_str);
+// 	memmove(dest, src, len);
+// 	printf("memmset():\t%s\n\n", test_target);
+// 	strcpy(test_target, test_str);
+// 	ft_memmove(dest, src, len);
+// 	printf("ft_memmset():\t%s\n\n", test_target);
+// }

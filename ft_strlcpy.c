@@ -1,11 +1,10 @@
 #include "libft.h"
-
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;
 
 	srclen = ft_strlen(src);
-	if (dst && src && (dstsize > 0))
+	if (dstsize > 0)
 	{
 		while (--dstsize)
 			*dst++ = *src++;
@@ -14,11 +13,16 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (srclen);
 }
 
-#include <string.h>
-#include <stdio.h>
-int main(){
-	char 	 dst[10] = "test";
-	char	*src = "icals";
-	strlcpy(dst, src, 4);
-	printf("%s\n",dst);
-}
+// #include <stdio.h>
+// #include <string.h>
+//
+// int	main(void)
+// {
+// 	char	dst[10] = "test";
+// 	char	*src;
+//
+// 	src = "icals";
+// 	// strlcpy(0, 0, 4);
+// 	ft_strlcpy(0, 0, 4);
+// 	printf("%s\n", dst);
+// }

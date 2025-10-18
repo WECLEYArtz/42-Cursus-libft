@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "stddef.h"
+
 void	*ft_memset(void *dest, int c, size_t len)
 {
 	unsigned char	*dest_work;
@@ -21,8 +22,8 @@ void	*ft_memset(void *dest, int c, size_t len)
 	return (dest);
 }
 
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
 
 // int	main(void)
 // {
@@ -45,3 +46,13 @@ void	*ft_memset(void *dest, int c, size_t len)
 // 			(char *)ft_memset(test_target + offset, '.', len) - offset
 // 			);
 // }
+
+int	main(void)
+{
+	unsigned char test[4] = {0};
+	memset(test,0,1);
+	memset(test+1,1,1);
+	printf("%d",((int *)test)[0]);//achieving 256
+}
+// [1|1|1|1|1|1|1|1]   [1|0|0|0|0|0|0|1]   [0|0|0|0|0|0|1|0]   [0|0|0|0|0|0|0|1]
+// 255                 129                 2                   1  
