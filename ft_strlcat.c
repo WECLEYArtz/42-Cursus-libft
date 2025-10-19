@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
+/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
@@ -29,9 +41,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 // 	ft_strlcat(dst_tset, src_test, 10);
 // 	printf("%s", dst_tset);
 // }
-
-
-
 
 // [ - , - , - , - ]             dst_len
 //

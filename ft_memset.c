@@ -6,7 +6,7 @@
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:05:04 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/16 12:05:04 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,11 @@ void	*ft_memset(void *dest, int c, size_t len)
 
 int	main(void)
 {
-	unsigned char test[4] = {0};
-	memset(test,0,1);
-	memset(test+1,1,1);
-	printf("%d",((int *)test)[0]);//achieving 256
+	unsigned char	test[4] = {0};
+
+	memset(test, 0, 1);
+	memset(test + 1, 1, 1);
+	printf("%d", ((int *)test)[0]); // achieving 256
 }
 // [1|1|1|1|1|1|1|1]   [1|0|0|0|0|0|0|1]   [0|0|0|0|0|0|1|0]   [0|0|0|0|0|0|0|1]
-// 255                 129                 2                   1  
+// 255                 129                 2                   1

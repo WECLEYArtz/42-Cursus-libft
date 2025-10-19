@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 12:02:54 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/18 21:07:27 by ahmounsi         ###   ########.fr       */
+/*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
+/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+char	*ft_strchr(const char *str, int chr)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
-}
+	char	*str_ptr;
 
-// #include <ctype.h>
-// #include <stdio.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	for (size_t i = 0; i <= 256; i++)
-// 	{
-// 		printf("%ld : %u ", i, ft_isalnum(i));
-// 		printf("| %d\n", isalnum(i));
-// 	}
-// }
+	str_ptr = (char *)str;
+	while (*str_ptr != (char)chr)
+		str_ptr++;
+	return (str_ptr);
+}
