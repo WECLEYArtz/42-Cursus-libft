@@ -20,9 +20,9 @@ void	*ft_memset(void *dest, int c, size_t len);
 void	ft_bzero(void *dest, size_t len);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-char	*strchr(const char *str, int chr);
-int		toupper(int c);
-char	*strchr(const char *str, int chr);
-char	*strrchr(const char *str, int chr);
-int		strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strchr(const char *str, int chr);
+int		ft_toupper(int c);
+char	*ft_strchr(const char *str, int chr);
+char	*ft_strrchr(const char *str, int chr);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 #endif

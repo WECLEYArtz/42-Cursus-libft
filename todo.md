@@ -17,7 +17,7 @@
 <!-- • strncmp -->
 <!-- • memchr -->
 <!-- • memcmp -->
-• strnstr
+<!-- • strnstr -->
 • atoi
 
 • calloc
