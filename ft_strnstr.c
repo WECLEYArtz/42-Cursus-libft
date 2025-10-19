@@ -7,9 +7,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	needle_len;
 	size_t	len_max;
 
-	if (!needle[0])
+	if (!*needle)
 		return ((char *)haystack);
-	len_max = ft_strlen(haystack) - ft_strlen(needle);
+	len_max = ft_strlen(haystack) - ft_strlen(needle) +1;
 	if (len > len_max) // scary
 		len = len_max;
 	needle_len = ft_strlen(needle);
@@ -35,18 +35,34 @@ int	main(void)
 
 	haystack = "test1234helloworld";
 	needle = "hello";
-	printf("\nlib:	%s", strnstr(haystack, needle, 12));
+	printf("\nlib:		%s", strnstr(haystack, needle, 12));
 	printf("\nftlib:	%s", ft_strnstr(haystack, needle, 12));
 }
 
-// [test123helloworld],16
-// [hell],5
+// [test1234helloworld],(12)18
+//              [hello],5
 
 // if asked to search 16
-// logically only need to search	(16 - 4 + 1) = 13
+// logically only need to search	(18 - 5 + 1) = 14
 
-// [test123helloworld],16 haystack
-// [123hellworld],5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// [test123helloworld],17 haystack
+//      [123hellworld],12
 
 // if asked to search 12
-// logically only need to search	(16 - 12 + 1) = 5
+// logically only need to search	(17 - 12 + 1) = 6
