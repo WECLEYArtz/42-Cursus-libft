@@ -12,6 +12,7 @@
 
 #ifndef libft_h
 # define libft_h
+# include <stdlib.h>
 # include <stddef.h>
 
 // part 1

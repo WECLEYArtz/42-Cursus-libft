@@ -18,7 +18,7 @@ int	memcmp(const void *str1, const void *str2, size_t n)
 	unsigned char	*str2_ptr;
 
 	str1_ptr = (unsigned char *)str1;
-	str2_ptr = (unsigned char *)str1;
+	str2_ptr = (unsigned char *)str2;
 	while (n--)
 	{
 		if (*str1_ptr != *str2_ptr)
