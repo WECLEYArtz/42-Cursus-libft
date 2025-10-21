@@ -18,11 +18,13 @@ char *ft_strdup(const char *str){
 	return  (new_str);
 }
 
-#include <stdio.h>
-#include <string.h>
-int main(){
-	char *src = "";
-	char *test;
-	test = strdup(0);
-	printf("balls : %s",test);
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main(){
+// 	char *new = "";
+// 	char *test = "balls ";
+// 	// new = strdup(test);
+// 	new = ft_strdup(test);
+// 	printf("new: %s",new);
+//
+// }

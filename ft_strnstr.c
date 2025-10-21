@@ -26,27 +26,26 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-// #include <bsd/string.h>
-#include <string.h>
-#include <stdio.h>
+// #include <bsd/string.h>	// for linux
+// #include <string.h>		// for macos
+// #include <stdio.h>
 
-int	main(void)
-{
-	char	*haystack;
-	char	*needle;
-
-	haystack = "test1234helloworld......";
-	needle = "1234helloworld";
-	printf("\nlib:		%s", strnstr(haystack, needle, 20));
-	printf("\nftlib:	%s", ft_strnstr(haystack, needle, 20));
-}
+// int	main(void)
+// {
+// 	char	*haystack;
+// 	char	*needle;
+//
+// 	haystack = "test1234helloworld......";
+// 	needle = "1234helloworld";
+// 	printf("\nlib:		%s", strnstr(haystack, needle, 20));
+// 	printf("\nftlib:	%s", ft_strnstr(haystack, needle, 20));
+// }
 
 // [       `     ]
 // [test1234helloworld], asked for :len :(13), haystack_len: (18)
 // [       ]    `
 //        [hello],5
 
-// ft_strnstr(needle, haystack, 13);
 
 // logically only need to search	(13 - 5 ) = 8
 // if asked to search 12 take 12
