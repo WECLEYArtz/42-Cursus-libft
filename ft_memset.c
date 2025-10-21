@@ -25,12 +25,12 @@ void	*ft_memset(void *dest, int c, size_t len)
 #include <stdio.h>
 #include <string.h>
 
+// [ test 1 ]
 // int	main(void)
 // {
 // 	int		len;
 // 	int		offset;
 // 	char	test_str[100] = "The memset() function writes len bytes of value c (converted to an unsigned char) to the string b";
-// 	// char test_str[100] = "The memset() function writes len bytes of value c (converted to an unsigned char) to the string b";
 // 	char	test_target[100];
 //
 // 	len = 10;
@@ -47,13 +47,17 @@ void	*ft_memset(void *dest, int c, size_t len)
 // 			);
 // }
 
-// int	main(void)
-// {
-// 	unsigned char	test[4] = {0};
-//
-// 	memset(test, 0, 1);
-// 	memset(test + 1, 1, 1);
-// 	printf("%d", ((int *)test)[0]); // achieving 256
-// }
+// [ test 2 ] (experimenting)
+int	main(void)
+{
+	unsigned char	test[4] = {0};
+
+	// ft_memset(test		, 57, 1);
+	// ft_memset(test + 1	, 5, 1);
+
+	// memset(test		, 0, 0);
+	// memset(test + 1	, 0, 0);
+	printf("%d", ((int *)test)[0]); // achieving 256
+}
 // [1|1|1|1|1|1|1|1]   [1|0|0|0|0|0|0|1]   [0|0|0|0|0|0|1|0]   [0|0|0|0|0|0|0|1]
 // 255                 129                 2                   1

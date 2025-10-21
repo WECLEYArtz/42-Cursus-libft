@@ -50,38 +50,42 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '-' || *str == '+')
-		if (*str++ == '-')
-			sign = -1;
+	if (*str == '+' || (*str == '-' && (sign = -1)))
+		str++;
 	ft_atoi_convert(&result, str, sign);
 	return (result * sign);
 }
 
-// #include <limits.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-//
-// int	main(void)
-// {
-// 	char	*test;
-//
-// 	// test = "-2147483648"; // int min
-// 	// test = "2147483647"; // int max
-// 	// test = "-2147483649"; // overflow to int max
-// 	// test = "-2147483648"; // overflow to int max
-// 	// test = " r\n\r\v\f\t-1993acbd"; // random dogshit
-// 	// test = "2147483648"; // overflow to int max
-//
-// 	// test = "922337203685477580"; // long long max - digit;
-// 	// test = "9223372036854775807"; // long long max
-// 	// test = "-9223372036854775808"; // long long min
-// 	// test = " 9223372036854775808"; // long long max + 1	has to be -1;
-// 	// test = "-9223372036854775809"; // long long min - 1		 has to be 0;
-//
-//
-// 	// test = " 9999999999999999999"; // long long max + allot	 has to be -1;
-// 	// test = "-9999999999999999999"; // long long min - allot		 has to be 0;
-//
-// 	printf("\natoi:	%d", atoi(test));
-// 	printf("\nft_atoi:	%d\n", ft_atoi(test));
-// }
+#include <limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+// NEOVIM
+// set mp=cc\ %\ \ft_isdigit.c\ &&\ ./a.out
+int	main(void)
+{
+	char	*test;
+
+	// test = "-0"; // the uh
+	// test = "0"; // the uh
+	// test = "1"; // the uh
+	// test = "-2147483648"; // int min
+	// test = "2147483647"; // int max
+	// test = "-2147483649"; // overflow to int max
+	// test = "-2147483648"; // overflow to int max
+	// test = " r\n\r\v\f\t-1993acbd"; // random dogshit
+	// test = "2147483648"; // overflow to int max
+
+	// test = "922337203685477580"; // long long max - digit;
+	// test = "9223372036854775807"; // long long max
+	// test = "-9223372036854775808"; // long long min
+	// test = " 9223372036854775808"; // long long max + 1	has to be -1;
+	// test = "-9223372036854775809"; // long long min - 1		 has to be 0;
+
+
+	// test = " 9999999999999999999"; // long long max + allot	 has to be -1;
+	// test = "-9999999999999999999"; // long long min - allot		 has to be 0;
+
+	printf("\natoi:	%d", atoi(test));
+	printf("\nft_atoi:	%d\n", ft_atoi(test));
+}

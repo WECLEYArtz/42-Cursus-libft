@@ -1,6 +1,6 @@
-<!-- • isalpha -->
-<!-- • isdigit -->
-<!-- • isalnum -->
+<!-- • isalpha -->  (looks good)
+<!-- • isdigit -->  (looks good)
+<!-- • isalnum -->  (looks good)
 <!-- • isascii -->
 <!-- • isprint -->
 <!-- • strlen -->
