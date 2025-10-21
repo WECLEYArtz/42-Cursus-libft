@@ -54,3 +54,7 @@ dkms.conf
 # debug information files
 *.dwo
 test.c
+
+# vim / nvim leftovers
+*hidden*
+*.swp
