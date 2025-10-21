@@ -20,5 +20,9 @@ void	*calloc(size_t count, size_t size)
 	if (!ft_memusable(mem))
 		return (0);
 	ft_bzero(mem,(count*size));
-	return (0);
+	return (mem);
+}
+
+int main(){
+	char	*test=calloc(10,4);
 }
