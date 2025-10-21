@@ -34,12 +34,13 @@ int	main(void)
 	int		start;
 	int		len;
 
+
 	test = 0;
 	start = 0;
 	len = 0;
 
 	test = ft_substr(test, start, len);
-	printf("%s\n", test);
+	printf("%s\n", test );
 }
 
 // NEOVIM
