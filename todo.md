@@ -20,5 +20,5 @@
 <!-- • strnstr -->
 <!-- • atoi -->
 
-• calloc
+<!-- • calloc -->
 • strdup
