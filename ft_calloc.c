@@ -12,7 +12,7 @@ static int	ft_memusable(void *mem)
 	return (1);
 }
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;
 
@@ -24,5 +24,6 @@ void	*calloc(size_t count, size_t size)
 }
 
 int main(){
-	char	*test=calloc(10,4);
+	char	*test1=calloc(10,4);
+	char	*test2=ft_calloc(10,4);
 }

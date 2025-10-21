@@ -47,13 +47,13 @@ void	*ft_memset(void *dest, int c, size_t len)
 // 			);
 // }
 
-int	main(void)
-{
-	unsigned char	test[4] = {0};
-
-	memset(test, 0, 1);
-	memset(test + 1, 1, 1);
-	printf("%d", ((int *)test)[0]); // achieving 256
-}
+// int	main(void)
+// {
+// 	unsigned char	test[4] = {0};
+//
+// 	memset(test, 0, 1);
+// 	memset(test + 1, 1, 1);
+// 	printf("%d", ((int *)test)[0]); // achieving 256
+// }
 // [1|1|1|1|1|1|1|1]   [1|0|0|0|0|0|0|1]   [0|0|0|0|0|0|1|0]   [0|0|0|0|0|0|0|1]
 // 255                 129                 2                   1
