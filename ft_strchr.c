@@ -15,7 +15,7 @@ char	*ft_strchr(const char *str, int chr)
 	char	*str_ptr;
 
 	str_ptr = (char *)str;
-	while (*str_ptr != (char)chr)
+	while (*str_ptr && *str_ptr != (char)chr)
 		str_ptr++;
 	return (str_ptr);
 }

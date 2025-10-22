@@ -14,9 +14,9 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (mem);
 }
 
-#include <stdio.h>
-int main(){
-	char *s1 = "kicking.";
-	char *s2 = ".balls";
-	printf("%s",ft_strjoin(s1,s2));
-}
+// #include <stdio.h>
+// int main(){
+// 	char *s1 = "kicking.";
+// 	char *s2 = ".balls";
+// 	printf("%s",ft_strjoin(s1,s2));
+// }
