@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
 #include "stddef.h"
 
 void	*ft_memset(void *dest, int c, size_t len)
@@ -20,4 +21,29 @@ void	*ft_memset(void *dest, int c, size_t len)
 	while (len-- > 0)
 		*dest_work++ = (unsigned char)c;
 	return (dest);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+// [ test 1 ]
+int	main(void)
+{
+	int		len;
+	int		offset;
+	char	test_str[100] = "The memset() function writes len bytes of value c (converted to an unsigned char) to the string b";
+	char	test_target[100];
+
+	len = 10;
+	offset = 10;
+	strcpy(test_target, test_str);
+	printf("memset():\nthen:\t%s\n", test_target);
+	printf("now:\t%s\n\n",
+			(char *)memset(test_target + offset, '.', len) - offset
+			);
+	strcpy(test_target, test_str);
+	printf("ft_memset():\nthen:\t%s\n", test_target);
+	printf("now:\t%s\n",
+			(char *)ft_memset(test_target + offset, '.', len) - offset
+			);
 }

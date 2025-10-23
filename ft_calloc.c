@@ -22,8 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(mem,(count*size));
 	return (mem);
 }
-
-// int main(){
-// 	char	*test1=calloc(10,4);
-// 	char	*test2=ft_calloc(10,4);
-// }

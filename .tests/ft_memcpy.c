@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/18 21:07:27 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+int main(int argc, char const *argv[])
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	available;
+    char str2[] = "ABCDEFG";
+    char str1[] = "ABCDEFG";
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if ((available = dst_size - dst_len) > 0)
-	{
-		ft_strlcpy(dst + dst_len, src, available);
-		return (dst_len + src_len);
-	}
-	else
-		return (dst_size + src_len);
+    char *str4 = memcpy(str2 + 5, str2, 3);
+    char  *str3= ft_memcpy(str1 +5, str1, 3);
+
+    printf("my     result is: %s\n", str3);
+    printf("memcpy result is: %s\n",str4);
+    return 0;
 }

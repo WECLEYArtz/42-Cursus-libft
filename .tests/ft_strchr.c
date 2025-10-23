@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,21 +10,4 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
-{
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	available;
-
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if ((available = dst_size - dst_len) > 0)
-	{
-		ft_strlcpy(dst + dst_len, src, available);
-		return (dst_len + src_len);
-	}
-	else
-		return (dst_size + src_len);
-}
+#include "../libft.h"

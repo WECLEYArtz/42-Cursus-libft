@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
+/*   Created: 2025/10/16 12:04:57 by ahmounsi          #+#    #+#             */
+/*   Updated: 2025/10/18 21:07:27 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+int	main(void)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	available;
-
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if ((available = dst_size - dst_len) > 0)
+	for (size_t i = 0; i <= 256; i++)
 	{
-		ft_strlcpy(dst + dst_len, src, available);
-		return (dst_len + src_len);
+		printf("%ld : %u ", i, ft_isdigit(i));
+		printf("| %d\n", isdigit(i));
 	}
-	else
-		return (dst_size + src_len);
 }

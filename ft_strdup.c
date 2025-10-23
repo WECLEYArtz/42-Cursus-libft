@@ -17,14 +17,3 @@ char *ft_strdup(const char *str){
 	ft_strcpy(new_str, str);
 	return  (new_str);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main(){
-// 	char *new = "";
-// 	char *test = "balls ";
-// 	// new = strdup(test);
-// 	new = ft_strdup(test);
-// 	printf("new: %s",new);
-//
-// }

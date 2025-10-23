@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
+/*   Created: 2025/10/18 21:06:22 by ahmounsi          #+#    #+#             */
 /*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	available;
+	char	dst[10] = "test";
+	char	*src;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	if ((available = dst_size - dst_len) > 0)
-	{
-		ft_strlcpy(dst + dst_len, src, available);
-		return (dst_len + src_len);
-	}
-	else
-		return (dst_size + src_len);
+	src = "icals";
+	strlcpy(0, 0, 4);
+	// ft_strlcpy(0, 0, 4);
+	printf("%s\n", dst);
 }

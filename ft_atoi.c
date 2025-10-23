@@ -12,6 +12,7 @@
 
 #include "libft.h"
 #include <limits.h>
+
 static int	ft_isspace(int c)
 {
 	if (c == ' ' || (9 <= c && c <= 13))
@@ -38,7 +39,6 @@ static void	ft_atoi_convert(long *result, const char *str, int sign)
 		else
 			*result = (*result * 10) + last_digit;
 	}
-
 }
 
 int	ft_atoi(const char *str)
@@ -56,36 +56,3 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-// #include <limits.h>
-// #include <stdio.h>
-// #include <stdlib.h>
-//
-// // NEOVIM
-// // set mp=cc\ %\ \ft_isdigit.c\ &&\ ./a.out
-// int	main(void)
-// {
-// 	char	*test;
-//
-// 	// test = "-0"; // the uh
-// 	// test = "0"; // the uh
-// 	// test = "1"; // the uh
-// 	// test = "-2147483648"; // int min
-// 	// test = "2147483647"; // int max
-// 	// test = "-2147483649"; // overflow to int max
-// 	// test = "-2147483648"; // overflow to int max
-// 	// test = " r\n\r\v\f\t-1993acbd"; // random dogshit
-// 	// test = "2147483648"; // overflow to int max
-//
-// 	// test = "922337203685477580"; // long long max - digit;
-// 	// test = "9223372036854775807"; // long long max
-// 	// test = "-9223372036854775808"; // long long min
-// 	// test = " 9223372036854775808"; // long long max + 1	has to be -1;
-// 	// test = "-9223372036854775809"; // long long min - 1		 has to be 0;
-//
-//
-// 	// test = " 9999999999999999999"; // long long max + allot	 has to be -1;
-// 	// test = "-9999999999999999999"; // long long min - allot		 has to be 0;
-//
-// 	printf("\natoi:	%d", atoi(test));
-// 	printf("\nft_atoi:	%d\n", ft_atoi(test));
-// }
