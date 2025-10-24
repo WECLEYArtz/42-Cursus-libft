@@ -75,12 +75,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (mem_ptr_arr);
 }
-
-// "....testing...1234..." "."	> "testing", "1234"
-// "testing...1234" "."			> "testing", "1234"
-// "....testing1234...." "."	> "testing", "1234"
-// "..................." "."	> ""
-// "" ""						> ""
-// 0 "."						> (null)
-// "test" 0						> "test"
-// "/200test/200test/200" "/200"> idk
