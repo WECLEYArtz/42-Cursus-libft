@@ -5,8 +5,9 @@
 
 static void	*ft_abort(char **mem_ptr_arr)
 {
-	while (*mem_ptr_arr)
-		free(mem_ptr_arr++);
+	size_t i = 0;
+	while (mem_ptr_arr[i])
+		free(mem_ptr_arr[i++]);
 	free(mem_ptr_arr);
 	return (NULL);
 }
