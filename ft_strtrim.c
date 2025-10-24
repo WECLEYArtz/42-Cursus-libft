@@ -13,8 +13,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len_max = 0;
 	while (*s1 && (*(ft_strchr(set, s1[len_max]))))
 		s1++;
-	while (s1[len_max] && !(*(ft_strchr(set, s1[len_max]))))
-		len_max++;
+	len_max = ft_strlen(s1);
+	while (s1[len_max-1] && (*(ft_strchr(set, s1[len_max-1]))))
+		len_max--;
 	mem = malloc(len_max+1);
 	if(!mem)
 		return (NULL);
