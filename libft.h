@@ -6,7 +6,7 @@
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:05:13 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/25 02:00:11 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/25 02:39:27 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ void ft_putchar_fd(char c, int fd);
 void ft_putstr_fd(char *s, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
+
+char *ft_itoa(int n);
 
 #endif
 
