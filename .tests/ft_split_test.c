@@ -7,7 +7,7 @@ int main( int argc, char **argv)
 	size_t i = 0;
 	if (argc != 3)
 	{
-		char *str = "";
+		char *str = "test.tsets.tsstest";
 		char dlmt = '.';
 		test = ft_split(str, dlmt);
 	}
@@ -22,15 +22,5 @@ int main( int argc, char **argv)
 	free(test);
 }
 
-// "....testing...1234..." "."	> "testing", "1234"
-// "testing...1234" "."			> "testing", "1234"
-// "....testing1234...." "."	> "testing", "1234"
-// "..................." "."	> ""
-// "" ""						> ""
-// 0 "."						> (null)
-// "test" 0						> "test"
-// "/200test/200test/200" "/200"> idk
-//
-//
-// NEOVIM
+// NEOVIM MKPG
 // set mp=cc\ %\ ../ft_split.c\ ../ft_strlen.c\ ../ft_strlcpy.c\ &&\ ./a.out

@@ -33,24 +33,3 @@ int	main(void)
 	ft_memmove(dest, src, len);
 	printf("ft_memmset():\t%s\n\n", test_target);
 }
-
-//  DIAGRAM
-//   a , b , c , d , e , f
-//
-//	(dst - src = 0)
-// [ - , - , - , - ] dst
-// [ - , - , - , - ] src
-//
-//	(dst - src > 0)
-// [ - , - , - , - ]         dst
-//         [ - , - , - , - ] src
-//
-//
-//	(dst - src < 0)
-//         [ - , - , - , - ] dst
-// [ - , - , - , - ]         src
-//
-// dst - src = 0: start from begining
-// dst - src > 0: src behind, start from begining
-// dst - src < 0: src advanced , start from  its end
-
