@@ -1,8 +1,12 @@
 #include "../libft.h"
+#include <stdint.h>
 #include <stdio.h>
+#include "limits.h"
 
 int main()
 {
+	printf("%s\n",ft_itoa(INTMAX_MAX));
+	printf("%s\n",ft_itoa(INTMAX_MIN));
 	printf("%s\n",ft_itoa(10));
 	printf("%s\n",ft_itoa(-10));
 	printf("%s\n",ft_itoa(0));
