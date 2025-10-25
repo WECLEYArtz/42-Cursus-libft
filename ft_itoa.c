@@ -20,7 +20,6 @@ size_t	ft_digits_count(int n)
 
 char *ft_itoa(int n)
 {
-	int nb = n;
 	char* str;
 	size_t digits_count;
 

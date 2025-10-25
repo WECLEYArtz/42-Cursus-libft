@@ -17,19 +17,20 @@
 
 int	main(void)
 {
-	int		len;
 	char	test_str[100] = "0123456789abcdefghijklmnopqrstuvwxzy";
 	char	test_target[100];
-	char	*src;
-	char	*dest;
 
-	src = test_target + 10;
-	dest = test_target;
-	len = 3;
-	strcpy(test_target, test_str);
-	memmove(dest, src, len);
-	printf("memmset():\t%s\n\n", test_target);
-	strcpy(test_target, test_str);
-	ft_memmove(dest, src, len);
-	printf("ft_memmset():\t%s\n\n", test_target);
+	// char	*src = test_target + 10;;
+	// char	*dest = test_target;;
+
+	char	*src = NULL;
+	char	*dest = test_target;
+	int		len = 0;
+
+	char *result = memmove(dest, src, len);
+	// char *result = ft_memmove(dest, src, len);
+	printf("%s", result);
 }
+
+// NEOVIM
+// set mp=cc\ %
