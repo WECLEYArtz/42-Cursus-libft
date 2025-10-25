@@ -10,15 +10,15 @@ int	main(void)
 
 
 	test = "0123456789";
-	start = 60;
-	len = 0;
+	start = 2;
+	len = 4;
 
 	test = ft_substr(test, start, len);
 	printf("%s\n", test );
 }
 
 // NEOVIM
-// set mp=cc\ *.c\  &&\ ./a.out
+// set mp=cc\ %\ ../ft_memset.c\ ../ft_strlcpy.c\ ../ft_bzero.c\ ../ft_substr.c\ ../ft_calloc.c\ ../ft_strlen.c\ &&\ ./a.out
 // cc ft_substr.c ft_calloc.c ft_strlcpy && ./a.out
 //
 //  [             ]
@@ -30,5 +30,3 @@ int	main(void)
 //
 // (6) + 12 ) - 15
 // 3
-//
-//
