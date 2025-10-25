@@ -3,7 +3,6 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len_max;
-	char	*mem;
 
 	if (!s1)
 		return (NULL);
