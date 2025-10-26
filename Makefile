@@ -46,7 +46,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $@ $^
 
-%.o : %.c $(HDR)
+.c.o: $(HDR)
 	cc -c $(CFLAGS) $<
 
 clean:
