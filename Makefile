@@ -2,6 +2,7 @@ HDR = libft.h
 NAME = libft.a
 CC = cc
 CFLAGS = -Werror -Wall -Wextra
+AR = ar rcs
 
 SRC =\
 ft_atoi.c \
@@ -39,12 +40,26 @@ ft_putstr_fd.c \
 ft_putendl_fd.c \
 ft_putnbr_fd.c
 
+SRC_B=\
+ft_lstnew.c \
+ft_lstadd_front.c \
+ft_lstsize.c \
+ft_lstlast.c \
+ft_lstadd_back.c \
+ft_lstdelone.c \
+ft_lstclear.c \
+ft_lstiter.c \
+ft_lstmap.c
+
 OBJ = $(SRC:.c=.o)
+OBJ_B = $(SRC_B:.c=.o)
 
-all: $(NAME)
+all: mandatory
 
-$(NAME): $(OBJ)
-	ar rcs $@ $^
+mandatory: $(OBJ)
+	$(AR) $(NAME) $^
+bonus: $(OBJ_B)
+	$(AR) $(NAME) $^
 
 %.o: %.c $(HDR)
 	cc -c $(CFLAGS) $<
