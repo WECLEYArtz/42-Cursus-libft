@@ -1,7 +1,7 @@
 HDR = libft.h
 NAME = libft.a
 CC = cc
-CFLAGS = -Werror -Wall -Wextra
+CFLAGS = -c -Werror -Wall -Wextra
 AR = ar rcs
 
 SRC =\
@@ -62,7 +62,7 @@ bonus: $(OBJ_B)
 	$(AR) $(NAME) $^
 
 %.o: %.c $(HDR)
-	cc -c $(CFLAGS) $<
+	$(CC) $(CFLAGS) $<
 
 clean:
 	rm -rf $(OBJ)
