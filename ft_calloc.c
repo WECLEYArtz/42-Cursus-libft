@@ -1,6 +1,5 @@
-#include <errno.h>
-#include <stdlib.h>
 #include "libft.h"
+#include <errno.h>
 
 static int	ft_memusable(void *mem)
 {
@@ -19,6 +18,6 @@ void	*ft_calloc(size_t count, size_t size)
 	mem = malloc(count * size);
 	if (!ft_memusable(mem))
 		return (0);
-	ft_bzero(mem,(count*size));
+	ft_bzero(mem, (count * size));
 	return (mem);
 }

@@ -1,11 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahmounsi <<marvin@42.fr>>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/27 05:34:47 by ahmounsi          #+#    #+#             */
+/*   Updated: 2025/10/27 05:36:13 by ahmounsi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 static void	*ft_abort(char **mem_ptr_arr)
 {
-	size_t i = 0;
+	size_t	i;
+
+	i = 0;
 	while (mem_ptr_arr[i])
 		free(mem_ptr_arr[i++]);
 	free(mem_ptr_arr);

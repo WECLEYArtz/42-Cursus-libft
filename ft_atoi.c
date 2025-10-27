@@ -21,19 +21,21 @@ static int	ft_isspace(int c)
 
 static void	ft_atoi_convert(long *result, const char *str, int sign)
 {
-	int sus = 0;
-	unsigned char last_digit;
+	int				sus;
+	unsigned char	last_digit;
+
+	sus = 0;
 	while (*str && sus != 18 && ft_isdigit(*str))
 	{
 		*result = (*result * 10) + (*str++ - '0');
 		sus++;
 	}
-	if(sus == 18 && *str && *result >= LONG_MIN/10)
+	if (sus == 18 && *str && *result >= LONG_MIN / 10)
 	{
 		last_digit = *str - '0';
-		if((sign == - 1) && last_digit > 8 )
+		if ((sign == -1) && last_digit > 8)
 			*result = 0;
-		else if((sign == 1) && last_digit > 7 )
+		else if ((sign == 1) && last_digit > 7)
 			*result = -1;
 		else
 			*result = (*result * 10) + last_digit;

@@ -6,11 +6,11 @@
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/18 21:07:27 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/27 05:34:25 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*src_work;
 
 	if (!(dst || src))
-		return NULL;
+		return (NULL);
 	if (dst - src <= 0)
 	{
 		dst_work = dst;
