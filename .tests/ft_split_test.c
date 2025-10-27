@@ -24,3 +24,4 @@ int main( int argc, char **argv)
 
 // NEOVIM MKPG
 // set mp=cc\ %\ ../ft_split.c\ ../ft_strlen.c\ ../ft_strlcpy.c\ &&\ ./a.out
+// set mp=cc\ %\ ../libft.a\ &&\ ./a.out
