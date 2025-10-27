@@ -1,12 +1,17 @@
 #include "../libft.h"
 #include <limits.h>
+#include <fcntl.h>
 
 int main(int argc, char **argv)
 {
-	// write(0,"\n",1);
-	// ft_putnbr_fd(atoi(argv[1]), 0);
-	// ft_putnbr_fd(INT_MAX, 0);
-	ft_putnbr_fd(INT_MIN, 0);
+	int fd = open("test.txt", O_CREAT | O_RDWR );
+	if( argc == 3)
+		ft_putnbr_fd(atoi(argv[1]), fd);
+	else
+	{
+		ft_putnbr_fd(INT_MAX, fd);
+		ft_putnbr_fd(INT_MIN, fd);
+	}
 }
 
 // NEOVIM MKPG
