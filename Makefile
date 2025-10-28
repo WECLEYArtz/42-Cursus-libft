@@ -65,7 +65,7 @@ bonus: $(OBJ_B)
 	$(CC) $(CFLAGS) $<
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(OBJ_B)
 
 fclean: clean
 	rm -rf $(NAME)
