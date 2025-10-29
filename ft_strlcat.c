@@ -6,7 +6,7 @@
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 21:06:19 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/18 21:07:28 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:59:04 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	if ((available = dst_size - dst_len) > 0)
+	available = dst_size - dst_len;
+	if ((available) > 0)
 	{
 		ft_strlcpy(dst + dst_len, src, available);
 		return (dst_len + src_len);

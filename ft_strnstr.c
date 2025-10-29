@@ -6,7 +6,7 @@
 /*   By: ahmounsi <<marvin@42.fr>>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 05:35:53 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/27 05:36:15 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:56:45 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (needle_len > len)
 		return (0);
 	len_max = len - needle_len + 1;
-	// if (len > len_max) // scary
-	// 	len = len_max;
 	i = 0;
 	while (len_max--)
 	{

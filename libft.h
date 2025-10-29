@@ -6,7 +6,7 @@
 /*   By: ahmounsi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 12:05:13 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/27 04:30:33 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:55:14 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,4 @@ void ft_lstdelone(t_list *lst, void (*del)(void *));
 void ft_lstclear(t_list **lst, void (*del)(void *));
 void ft_lstiter(t_list *lst, void (*f)(void *));
 t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-
- 
-
 #endif
-
-// l9wada hh
-// ls *.c -1 | grep -v '^test.c$'| grep -v '^libft.h$' | sed s/.c$/\(/ | xargs -d '\n' -I{} rg -F -N --no-filename --iglob '!libft.h' {} | grep -v ";" | sed 's/$/;/'

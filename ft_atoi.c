@@ -6,7 +6,7 @@
 /*   By: ahmounsi <<marvin@42.fr>>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:30:19 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/20 17:48:11 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:59:47 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ static int	ft_isspace(int c)
 
 static void	ft_atoi_convert(long *result, const char *str, int sign)
 {
-	int				sus;
+	size_t			parsed;
 	unsigned char	last_digit;
 
-	sus = 0;
-	while (*str && sus != 18 && ft_isdigit(*str))
+	parsed = 0;
+	while (*str && parsed != 18 && ft_isdigit(*str))
 	{
 		*result = (*result * 10) + (*str++ - '0');
-		sus++;
+		parsed++;
 	}
-	if (sus == 18 && *str && *result >= LONG_MIN / 10)
+	if (*str && parsed == 18 && *result >= LONG_MIN / 10)
 	{
 		last_digit = *str - '0';
 		if ((sign == -1) && last_digit > 8)
@@ -51,8 +51,12 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '+' || (*str == '-' && (sign = -1)))
+	if (*str == '+' || (*str == '-'))
+	{
+		(sign = -1);
 		str++;
+	}
 	ft_atoi_convert(&result, str, sign);
 	return (result * sign);
 }
+// "9223372036854775808\n"

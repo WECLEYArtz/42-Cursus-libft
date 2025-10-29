@@ -6,7 +6,7 @@
 /*   By: ahmounsi <<marvin@42.fr>>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 04:31:04 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/27 22:30:34 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 00:57:18 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (current);
 }
-
-// [[content][next]]  _[[content][next]]   _[[content][next]]   _[[content][next]]
-//               \___/                \___/                \___/
-//
-// [[content][next]]  _[[content][next]]   _[[content][next]]   _[[content][next]]
-//               \___/                \___/                \___/

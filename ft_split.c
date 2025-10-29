@@ -6,7 +6,7 @@
 /*   By: ahmounsi <<marvin@42.fr>>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 05:34:47 by ahmounsi          #+#    #+#             */
-/*   Updated: 2025/10/27 05:36:13 by ahmounsi         ###   ########.fr       */
+/*   Updated: 2025/10/29 01:00:20 by ahmounsi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (*s && *s == c)
 			s++;
-		tokken_count = ft_tokkenscount(s, c); // works fine
+		tokken_count = ft_tokkenscount(s, c);
 		mem_ptr_arr = malloc((tokken_count + 1) * sizeof(char **));
 		if (!mem_ptr_arr || !ft_allocatetokkens(mem_ptr_arr, s, c))
 			return (ft_abort(mem_ptr_arr));
