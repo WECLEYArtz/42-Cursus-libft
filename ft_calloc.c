@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-static int	ft_memusable(void *mem)
-{
-	if (!mem)
-		return (0);
-	return (1);
-}
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;
@@ -26,8 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 	if (count && size && ((count * size) / size) != count)
 		return (NULL);
 	mem = malloc(count * size);
-	if (!ft_memusable(mem))
-		return (0);
+	if (!mem)
+		return (NULL);
 	ft_bzero(mem, (count * size));
 	return (mem);
 }

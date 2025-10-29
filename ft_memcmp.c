@@ -12,13 +12,15 @@
 
 #include "libft.h"
 
-int	memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
 	unsigned char	*str1_ptr;
 	unsigned char	*str2_ptr;
 
 	str1_ptr = (unsigned char *)str1;
 	str2_ptr = (unsigned char *)str2;
+	// if (str1_ptr == NULL && str2_ptr == NULL)
+	// 	return (0); // all mem functions
 	while (n--)
 	{
 		if (*str1_ptr != *str2_ptr)

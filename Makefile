@@ -1,5 +1,6 @@
 HDR = libft.h
 NAME = libft.a
+NAME_B = libft_B.a
 CC = cc
 CFLAGS = -c -Werror -Wall -Wextra
 AR = ar rcs
@@ -41,34 +42,35 @@ ft_putendl_fd.c \
 ft_putnbr_fd.c
 
 SRC_B=\
-ft_lstnew.c \
-ft_lstadd_front.c \
-ft_lstsize.c \
-ft_lstlast.c \
-ft_lstadd_back.c \
-ft_lstdelone.c \
-ft_lstclear.c \
-ft_lstiter.c \
-ft_lstmap.c
+ft_lstnew_bonus.c \
+ft_lstadd_front_bonus.c \
+ft_lstsize_bonus.c \
+ft_lstlast_bonus.c \
+ft_lstadd_back_bonus.c \
+ft_lstdelone_bonus.c \
+ft_lstclear_bonus.c \
+ft_lstiter_bonus.c \
+ft_lstmap_bonus.c
 
 OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
-all: mandatory
+all: $(NAME)
+bonus: $(NAME_B)
 
-mandatory: $(OBJ)
+$(NAME): $(OBJ)
 	$(AR) $(NAME) $^
-bonus: $(OBJ_B)
+$(NAME_B): $(NAME) $(OBJ_B)
 	$(AR) $(NAME) $^
 
 %.o: %.c $(HDR)
 	$(CC) $(CFLAGS) $<
 
 clean:
-	rm -rf $(OBJ) $(OBJ_B)
+	rm -f $(OBJ) $(OBJ_B)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME) bonus
 
 re: fclean clean
 
