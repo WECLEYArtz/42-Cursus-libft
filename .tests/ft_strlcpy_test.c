@@ -18,11 +18,14 @@
 
 int	main(void)
 {
-	char	dst[10] = "test";
+	char	dst[10] = "AAAAAAAAAA";
 	char	*src;
 
 	src = "icals";
-	strlcpy(0, 0, 4);
+	strlcpy(dst, dst, -1);
 	// ft_strlcpy(0, 0, 4);
 	printf("%s\n", dst);
 }
+
+// set mp=cc\ %\ ../libft.a\ &&\ ./a.out
+// cc % ../libft.a && ./a.out

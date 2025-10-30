@@ -14,9 +14,9 @@
 
 static size_t	ft_better_size(size_t s_len, int start, size_t len)
 {
-	size_t	diff;
+	long	diff;
 
-	diff = ((start) + len) - s_len;
+	diff = (start + len) - s_len;
 	if (diff > 0)
 		return (len - diff);
 	return (len);
@@ -38,3 +38,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(mem, &s[start], len + 1);
 	return (mem);
 }
+
+

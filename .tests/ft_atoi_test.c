@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include "../libft.h"
 
-// NEOVIM
-// set mp=cc\ %\ \ft_isdigit.c\ &&\ ./a.out
 int	main(void)
 {
 	char	*test;
@@ -11,6 +9,7 @@ int	main(void)
 	// test = "-0"; // the uh
 	// test = "0"; // the uh
 	// test = "1"; // the uh
+	test = "+1"; // the uh
 	// test = "-2147483648"; // int min
 	// test = "2147483647"; // int max
 	// test = "-2147483649"; // overflow to int max
@@ -25,9 +24,12 @@ int	main(void)
 	// test = "-9223372036854775809"; // long long min - 1		 has to be 0;
 
 
-	test = " 9999999999999999999"; // long long max + allot	 has to be -1;
-	test = "-9999999999999999999"; // long long min - allot		 has to be 0;
+	// test = " 9999999999999999999"; // long long max + allot	 has to be -1;
+	// test = "-9999999999999999999"; // long long min - allot		 has to be 0;
 
-	printf("\natoi:	%d", atoi(test));
+	// printf("\natoi:	%d", atoi(test));
 	printf("\nft_atoi:	%d\n", ft_atoi(test));
 }
+
+// NEOVIM
+// set mp=cc\ %\ ../libft.a\ &&\ ./a.out

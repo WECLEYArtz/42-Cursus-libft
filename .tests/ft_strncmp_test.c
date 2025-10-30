@@ -10,5 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include <stddef.h>
+#include <stdio.h>
+#include <string.h>
 #include "../libft.h"
+int main()
+{
+	char *s  = NULL;
+	printf("%d\n", ft_strncmp(s,s,1));
+	
+}
+// set mp=cc\ %\ ../libft.a\ &&\ ./a.out

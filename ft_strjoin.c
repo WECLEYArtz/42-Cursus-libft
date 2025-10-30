@@ -30,7 +30,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	mem = malloc((s1_len + s2_len) + 1);
 	if (!mem)
 		return (NULL);
-	ft_strlcat(mem, s1, s1_len + 1);
-	ft_strlcat(mem + s1_len, s2, s2_len + 1);
+	ft_strlcpy(mem, s1, s1_len + 1);
+	ft_strlcpy(mem + s1_len, s2, s2_len + 1);
 	return (mem);
 }

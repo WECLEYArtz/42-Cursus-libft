@@ -29,10 +29,9 @@ int main(int argc, char const *argv[])
 
 
 
-    char str[5] = "hello";
+    char str[6] = "hello";
 	int l = 10 ;
-	int c = 0 ;
-	printf("%s",(char *)memchr(str,c,l));
-	
+	printf("%s",(char *)ft_memcpy(str,str,l));
+
     return 0;
 }

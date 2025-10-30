@@ -53,7 +53,8 @@ int	ft_atoi(const char *str)
 		str++;
 	if (*str == '+' || (*str == '-'))
 	{
-		(sign = -1);
+		if(*str == '-')
+			(sign = -1);
 		str++;
 	}
 	ft_atoi_convert(&result, str, sign);
