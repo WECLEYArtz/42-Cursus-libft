@@ -56,11 +56,11 @@ OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
-bonus: $(NAME_B)
+bonus: $(OBJ_B)
+	$(AR) $(NAME) $^
+	@touch bonus
 
 $(NAME): $(OBJ)
-	$(AR) $(NAME) $^
-$(NAME_B): $(NAME) $(OBJ_B)
 	$(AR) $(NAME) $^
 
 %.o: %.c $(HDR)

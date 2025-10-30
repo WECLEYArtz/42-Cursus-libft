@@ -1,6 +1,6 @@
 #include "../libft.h"
 #include <stddef.h>
-#include <bsd/string.h>	// for linux
+// #include <bsd/string.h>	// for linux
 #include <string.h>		// for macos
 #include <stdio.h>
 
@@ -9,8 +9,9 @@ int	main(void)
 	char	*haystack;
 	char	*needle;
 
-	haystack = "test1234helloworld......";
+	haystack = NULL;
 	needle = "1234helloworld";
+
 	printf("\nlib:		%s", strnstr(haystack, needle, 20));
 	printf("\nftlib:	%s", ft_strnstr(haystack, needle, 20));
 }
@@ -31,3 +32,6 @@ int	main(void)
 
 // if asked to search 12
 // logically only need to search	(17 - 12 + 1) = 6
+
+// NEOVIM
+// set mp=cc\ %\ ../libft.a\ &&\ ./a.out

@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	while (*(unsigned char *)str && n--)
+	while (n--)
 	{
 		if (*(unsigned char *)str == (unsigned char)c)
 			return ((void *)str);
@@ -22,3 +22,5 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (0);
 }
+
+//check

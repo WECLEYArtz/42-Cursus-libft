@@ -4,7 +4,9 @@
 
 int main(int argc, char **argv)
 {
-	int fd = open("test.txt", O_CREAT | O_RDWR );
+	int fd = 1;
+	// fd = open("test.txt", O_CREAT | O_RDWR );
+
 	if( argc == 3)
 		ft_putnbr_fd(atoi(argv[1]), fd);
 	else

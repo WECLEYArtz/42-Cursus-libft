@@ -12,3 +12,13 @@
 
 #include "../libft.h"
 #include <stddef.h>
+#include <string.h>
+int main(){
+
+
+	char dst[5] = "hello";
+	char *src = NULL;
+	int l =10;
+	int result = memcmp(dst,src,l);
+}
+

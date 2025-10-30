@@ -21,3 +21,5 @@ void	*ft_memset(void *dest, int c, size_t len)
 		*dest_work++ = (unsigned char)c;
 	return (dest);
 }
+
+// check

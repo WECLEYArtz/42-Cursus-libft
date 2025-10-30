@@ -19,8 +19,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 
 	str1_ptr = (unsigned char *)str1;
 	str2_ptr = (unsigned char *)str2;
-	// if (str1_ptr == NULL && str2_ptr == NULL)
-	// 	return (0); // all mem functions
+	if (str1 == str2)
+		return (0);
 	while (n--)
 	{
 		if (*str1_ptr != *str2_ptr)
@@ -30,3 +30,5 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
+
+// check

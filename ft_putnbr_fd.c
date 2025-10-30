@@ -29,3 +29,5 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putnbr_fd_rec(n, fd);
 }
+
+// check
