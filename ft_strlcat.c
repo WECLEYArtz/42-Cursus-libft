@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
@@ -20,12 +21,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	available = dst_size - dst_len;
-	if ((available) > 0)
+
+	if (dst_size > dst_len)
 	{
+		available = dst_size - dst_len;
+		if((size_t)available >= src_len+1)
+			available = src_len+1;
 		ft_strlcpy(dst + dst_len, src, available);
 		return (dst_len + src_len);
 	}
 	else
 		return (dst_size + src_len);
 }
+
+// [                              ] dst_len = 6 / dst_size = (30)
+// [aaaaaa] = src_len = 6
