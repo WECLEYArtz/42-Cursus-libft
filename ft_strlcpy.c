@@ -23,7 +23,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 		if (src_len + 1 <= dst_size)
 			slots = src_len;
 		else
-			slots = dst_size -1;
+			slots = dst_size - 1;
 		ft_memcpy(dst, src, slots);
 		dst[slots] = 0;
 	}

@@ -21,12 +21,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-
 	if (dst_size > dst_len)
 	{
 		available = dst_size - dst_len;
-		if((size_t)available >= src_len+1)
-			available = src_len+1;
+		if ((size_t)available >= src_len + 1)
+			available = src_len + 1;
 		ft_strlcpy(dst + dst_len, src, available);
 		return (dst_len + src_len);
 	}

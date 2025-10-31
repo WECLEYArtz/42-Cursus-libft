@@ -14,7 +14,6 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
-
 	unsigned char	*dst_work;
 	unsigned char	*src_work;
 

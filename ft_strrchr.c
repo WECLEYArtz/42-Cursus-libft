@@ -16,7 +16,7 @@ char	*ft_strrchr(const char *str, int chr)
 {
 	char	*last_occ;
 
-	if(!chr)
+	if (!chr)
 		return ((char *)&str[ft_strlen(str)]);
 	last_occ = 0;
 	while (*str)

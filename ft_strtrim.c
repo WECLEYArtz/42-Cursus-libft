@@ -11,14 +11,17 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-static	int is_set(char const *set, char const chr)
-{
-	char *result = ft_strchr(set, chr);
-	if (!result || !result[0])
-		return 0;
-	return 1;
 
-};
+static int	is_set(char const *set, char const chr)
+{
+	char	*result;
+
+	result = ft_strchr(set, chr);
+	if (!result || !result[0])
+		return (0);
+	return (1);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len_max;

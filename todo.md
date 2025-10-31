@@ -10,7 +10,7 @@
 • memcpy
 • memmove
 • strlcpy
-strlcat (stupid -1 size_t)
+• strlcat
 • toupper
 • tolower
 • strchr
@@ -18,7 +18,7 @@ strlcat (stupid -1 size_t)
 • strncmp
 • memchr
 • memcmp
-strnstr (stupid -1 size_t)
+• strnstr
 • atoi
 • calloc
 • strdup
@@ -27,11 +27,11 @@ strnstr (stupid -1 size_t)
 
 11 function
 
-ft_substr (idk, looks good , segs in huge size)
+ft_substr •
 ft_strjoin •
-ft_strtrim
-ft_split
-ft_itoa
+ft_strtrim •
+ft_split •
+ft_itoa •
 ft_strmapi
 ft_striteri •
 ft_putchar_fd •

@@ -38,5 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(mem, &s[start], len + 1);
 	return (mem);
 }
-
-
