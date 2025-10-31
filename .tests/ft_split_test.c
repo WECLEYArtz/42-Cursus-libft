@@ -7,8 +7,8 @@ int main( int argc, char **argv)
 	size_t i = 0;
 	if (argc != 3)
 	{
-		char *str = "test.tsets.tsstest";
-		char dlmt = '.';
+		char *str = "  testing123  42  ";
+		char dlmt = ' ';
 		test = ft_split(str, dlmt);
 	}
 	else{
@@ -23,4 +23,4 @@ int main( int argc, char **argv)
 }
 
 // NEOVIM MKPG
-// set mp=cc\ %\ ../libft.a\ &&\ ./a.out
+// set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
