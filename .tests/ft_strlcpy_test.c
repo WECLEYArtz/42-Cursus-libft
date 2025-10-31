@@ -18,14 +18,12 @@
 
 int	main(void)
 {
-	char	dst[10] = "AAAAAAAAAA";
-	char	*src;
+	char src[] = "coucou";
+	char dest[10]; memset(dest, 'A', 10);
 
-	src = "icals";
-	strlcpy(dst, dst, -1);
-	// ft_strlcpy(0, 0, 4);
-	printf("%s\n", dst);
+	ft_strlcpy(dest, src, 1);
+	// printf("%s\n", dst);
 }
 
-// set mp=cc\ %\ ../libft.a\ &&\ ./a.out
+// set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
 // cc % ../libft.a && ./a.out

@@ -12,16 +12,26 @@
 
 #include "../libft.h"
 #include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {
-	char	dst_tset[12] = "12345";
-	char	*src_test;
+	char dest[30]; memset(dest, 0, 30);
+	char * src = (char *)"AAAAAAAAA";
+	int result;
+	dest[0] = 'B';
 
-	src_test = "6789....";
-	ft_strlcat(dst_tset, src_test, 10);
-	printf("%s", dst_tset);
+	result = ft_strlcat(dest, src, 0);
+
+	memset(dest, 'C', 5);
+	result = ft_strlcat(dest, src, -1);
 }
+
+// [55555                         ]	dest_actualsize = 30;
+// [AAAAAAAAA]	src_len = 9;
+
+// set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
+// cc % ../libft.a && ./a.out
 
 // [ - , - , - , - ]             dst_len
 //
