@@ -6,18 +6,13 @@
 
 int	main(void)
 {
-	char	*haystack;
-	char	*needle;
-	char *result;
+	char haystack[30] = "aaabcabcd";
+	char needle[10] = "aabc";
+	char * empty = (char*)"";
 
-	haystack = "1234helloworld";
-	needle = "hello";
 
-	// result = strstr(haystack, needle, -1);
-	// printf("\nlib:		%s", result);
-
-	result = ft_strnstr(haystack, needle, -1);
-	printf("\nftlib:	%s", result);
+	char *result = ft_strnstr(empty, "coucou", -1);
+	// char *result = ft_strnstr(haystack, "c", 0);
 }
 
 // [       `     ]

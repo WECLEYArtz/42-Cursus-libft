@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (0);
 	len_max = len - needle_len + 1;
 	i = 0;
-	while (len_max--)
+	while (len_max-- && haystack[i])
 	{
 		if (haystack[i] == needle[0] && ft_strncmp(&haystack[i], needle,
 				needle_len) == 0)
