@@ -1,7 +1,7 @@
-
 git branch -D vogsphere
 git checkout -b vogsphere
 
+make fclean
 rm -rf libft.a
 rm -rf .tests
 rm -rf *.o
