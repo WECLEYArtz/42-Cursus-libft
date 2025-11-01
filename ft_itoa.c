@@ -26,7 +26,6 @@ static size_t	ft_digits_count(long n)
 	}
 	return (digits_count);
 }
-// i am mentaly ill wtf
 
 static void	ft_itoa_convert(char *str, long ln, size_t digits_count)
 {
@@ -35,6 +34,7 @@ static void	ft_itoa_convert(char *str, long ln, size_t digits_count)
 		str[-1] = '-';
 		ln = -ln;
 	}
+	str[digits_count] = 0;
 	while (digits_count)
 	{
 		str[(digits_count-- - 1)] = ln % 10 + '0';
@@ -53,7 +53,6 @@ char	*ft_itoa(int n)
 	str = malloc(digits_count + (1 * (ln < 0)) + 1);
 	if (!str)
 		return (NULL);
-	str[digits_count] = 0;
 	ft_itoa_convert(str + (1 * (ln < 0)), ln, digits_count);
 	return (str);
 }
