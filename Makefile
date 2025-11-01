@@ -1,6 +1,5 @@
 HDR = libft.h
 NAME = libft.a
-NAME_B = libft_B.a
 CC = cc
 CFLAGS = -c -Werror -Wall -Wextra
 AR = ar rcs
@@ -56,6 +55,7 @@ OBJ = $(SRC:.c=.o)
 OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
+
 bonus: $(OBJ_B)
 	$(AR) $(NAME) $^
 	@touch bonus
@@ -66,12 +66,12 @@ $(NAME): $(OBJ)
 %.o: %.c $(HDR)
 	$(CC) $(CFLAGS) $<
 
-clean:
+clean: 
 	rm -f $(OBJ) $(OBJ_B)
 
 fclean: clean
 	rm -f $(NAME) bonus
 
-re: fclean clean
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: fclean all clean re
