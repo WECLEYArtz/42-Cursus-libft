@@ -19,31 +19,26 @@ static int	ft_isspace(int c)
 	return (0);
 }
 
-static void	ft_atoi_convert(long *result, const char *str, int sign)
+static long	ft_atoi_convert(const char *str, int sign)
 {
-	size_t			parsed;
-	unsigned char	last_digit;
-
-	parsed = 0;
-	while (*str && parsed != 18 && ft_isdigit(*str))
-	{
-		*result = (*result * 10) + (*str++ - '0');
-		parsed++;
-	}
-	if (*str && parsed == 18 && *result >= LONG_MIN / 10)
-	{
-		last_digit = *str - '0';
-		if ((sign == -1) && last_digit > 8)
-			*result = 0;
-		else if ((sign == 1) && last_digit > 7)
-			*result = -1;
+	long			result;
+	result = 0;
+	while (*str && ft_isdigit(*str))
+		if((long)((result * 10) + (long)(*str - '0')) < result)
+		{
+			if(sign == -1 && (*str - '0') > 7)
+				return (0);
+			else
+				return (-1);
+		}
 		else
-			*result = (*result * 10) + last_digit;
-	}
+			result = (result * 10) + (*str++ - '0');
+	return (result);
 }
 
 int	ft_atoi(const char *str)
 {
+
 	long	result;
 	int		sign;
 
@@ -57,6 +52,6 @@ int	ft_atoi(const char *str)
 			(sign = -1);
 		str++;
 	}
-	ft_atoi_convert(&result, str, sign);
+	result = ft_atoi_convert(str, sign);
 	return (result * sign);
 }
