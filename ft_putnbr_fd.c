@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_putnbr_fd_rec(unsigned long n, int fd)
+static void	ft_putnbr_fd_rec(unsigned long n, int fd)
 {
 	if (n > 9)
 		ft_putnbr_fd_rec(n / 10, fd);
