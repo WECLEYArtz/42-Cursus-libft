@@ -60,5 +60,3 @@ int	ft_atoi(const char *str)
 	ft_atoi_convert(&result, str, sign);
 	return (result * sign);
 }
-
-// (check)

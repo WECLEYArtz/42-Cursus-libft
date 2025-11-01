@@ -32,6 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	else
 		return (dst_size + src_len);
 }
-
-// [                              ] dst_len = 6 / dst_size = (30)
-// [aaaaaa] = src_len = 6

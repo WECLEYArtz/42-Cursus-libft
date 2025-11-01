@@ -57,5 +57,3 @@ char	*ft_itoa(int n)
 	ft_itoa_convert(str + (1 * (ln < 0)), ln, digits_count);
 	return (str);
 }
-
-// (check)

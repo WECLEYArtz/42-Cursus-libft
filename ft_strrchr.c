@@ -27,5 +27,3 @@ char	*ft_strrchr(const char *str, int chr)
 	}
 	return (last_occ);
 }
-
-// check
