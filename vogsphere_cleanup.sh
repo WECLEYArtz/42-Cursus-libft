@@ -9,4 +9,4 @@ rm -rf ./vogsphere_cleanup.sh
 
 git add .
 git commit -m "auto delete"
-git push 42 vogsphere:main
+git push -f 42 vogsphere:main
