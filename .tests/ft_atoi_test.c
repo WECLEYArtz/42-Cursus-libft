@@ -28,7 +28,11 @@ int	main(void)
 	// test = "-9999999999999999999"; // long long min - allot		 has to be 0;
 
 	// printf("\natoi:	%d", atoi(test));
-	printf("\nft_atoi:	%d\n", ft_atoi(test));
+	// printf("\nft_atoi:	%d\n", ft_atoi(test));
+
+	printf("%d\n",ft_atoi("+0000000000000000000000000000000000000000000000000000123"));
+	printf("%d\n",atoi("+0000000000000000000000000000000000000000000000000000123"));
+
 }
 
 // NEOVIM

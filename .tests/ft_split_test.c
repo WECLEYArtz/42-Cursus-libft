@@ -7,7 +7,7 @@ int main( int argc, char **argv)
 	size_t i = 0;
 	if (argc != 3)
 	{
-		char *str = "  testing123  42  ";
+		char *str = "      split       this for   me  !";
 		char dlmt = ' ';
 		test = ft_split(str, dlmt);
 	}
@@ -16,7 +16,7 @@ int main( int argc, char **argv)
 	}
 	while(test[i])
 	{
-		printf("%s\n",test[i]);
+		printf("%d : %s\n", (int)i,test[i]);
 		free(test[i++]);
 	}
 	free(test);

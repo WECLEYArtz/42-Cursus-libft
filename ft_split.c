@@ -57,7 +57,7 @@ static void	*ft_allocatetokkens(char **mem_ptr_arr, const char *s, char c)
 			s++;
 			wd_len++;
 		}
-		mem_ptr_arr[i] = malloc((wd_len + 1) * sizeof(char));
+		mem_ptr_arr[i] = malloc(wd_len + 1);
 		if (!mem_ptr_arr[i])
 			return (NULL);
 		ft_strlcpy(mem_ptr_arr[i++], s - wd_len, wd_len + 1);

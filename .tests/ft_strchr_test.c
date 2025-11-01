@@ -26,8 +26,13 @@ int main()
     // printf("my     result is: %s\n", str3);
     // printf("memcpy result is: %s\n",str4);
 
-    char *str = "";
+    char *str = "teste";
 	int c = 0 ;
-	printf("%s",(char *)strchr(str,c));
+	char *result;
+	char *result2;
+	result = strchr(str,c);
+	result2 = ft_strchr(str,c);
+
+	printf("%d",(result2 == result));
     return 0;
 }
