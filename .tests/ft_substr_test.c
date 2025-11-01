@@ -1,5 +1,6 @@
 #include "../libft.h"
 
+
 #include <stdio.h>
 
 int	main(void)
@@ -14,6 +15,7 @@ int	main(void)
 	start = 0;
 	len = 42000;
 	result = ft_substr(test, start, len);
+	result = ft_substr("hola", 0, 18446744073709551615);
 	// printf("%s\n", result);
 	// ft_substr("tripouille", 0, 42000);
 	free(result);

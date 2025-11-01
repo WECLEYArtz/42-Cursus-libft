@@ -16,13 +16,9 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*mem;
 
-	if (!count || !size)
-	{
-		count = 1;
-		size = 1;
-	}
-	else if (((count * size) / size) != count)
-		return (NULL);
+	if (count && size)
+		if (((count * size) / size) != count)
+			return (NULL);
 	mem = malloc(count * size);
 	if (!mem)
 		return (NULL);
