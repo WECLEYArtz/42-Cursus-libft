@@ -15,9 +15,10 @@
 
 static size_t	ft_better_size(size_t s_len, int start, size_t len)
 {
-	size_t diff;
+	size_t	diff;
+
 	diff = (s_len - start);
-	if(diff < len)
+	if (diff < len)
 		return (diff);
 	return (len);
 }

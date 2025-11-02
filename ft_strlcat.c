@@ -20,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	size_t	available;
 
 	if (!dst && !dst_size)
-		return 0;
+		return (0);
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dst_size > dst_len)
@@ -34,4 +34,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 	else
 		return (dst_size + src_len);
 }
-
