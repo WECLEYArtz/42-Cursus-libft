@@ -14,24 +14,35 @@
 #include <stdio.h>
 #include <string.h>
 
-int	main(void)
+// int	main(void)
+// {
+// 	char dest[30]; memset(dest, 0, 30);
+// 	char * src = (char *)"AAAAAAAAA";
+// 	int result;
+// 	dest[0] = 'B';
+//
+// 	result = ft_strlcat(dest, src, 0);
+//
+// 	memset(dest, 'C', 5);
+// 	result = ft_strlcat(dest, src, -1);
+//
+// }
+
+int main()
 {
-	char dest[30]; memset(dest, 0, 30);
-	char * src = (char *)"AAAAAAAAA";
-	int result;
-	dest[0] = 'B';
+	char dst[9] = "test";
+	char *src = "test";
 
-	result = ft_strlcat(dest, src, 0);
+	// ft_strlcat(name, name, (size_t)10);
+	// ft_strlcat(name, name, (size_t)10);
 
-	memset(dest, 'C', 5);
-	result = ft_strlcat(dest, src, -1);
+	// printf("name: %s retuen: %zu \n", name, ft_strlcat(name+17, name, (size_t)10));
+	printf("name: %s retuen: %zu \n", dst, strlcat(dst , dst, 5));
 }
 
 // [55555                         ]	dest_actualsize = 30;
 // [AAAAAAAAA]	src_len = 9;
 
-// set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
-// cc % ../libft.a && ./a.out
 
 // [ - , - , - , - ]             dst_len
 //
@@ -58,3 +69,6 @@ int	main(void)
 // [ - , - , - , - , - , - , - ] DST_SIZE
 //                               available ( dst_size - dst_len = 1 )
 //                               tried     ( dst_size + src_len )
+
+// set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
+// cc % ../libft.a && ./a.out

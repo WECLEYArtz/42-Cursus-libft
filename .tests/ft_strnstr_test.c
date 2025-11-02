@@ -1,18 +1,19 @@
 #include "../libft.h"
 #include <stddef.h>
 // #include <bsd/string.h>	// for linux
-// #include <string.h>		// for macos
+#include <string.h>		// for macos
 #include <stdio.h>
 
 int	main(void)
 {
-	char haystack[30] = "aaabcabcd";
-	char needle[10] = "aabc";
-	char * empty = (char*)"";
+	// char haystack[30] = "aaabcabcd";
+	// char needle[10] = "aabc";
+	// char * empty = (char*)"";
 
 
-	char *result = ft_strnstr(empty, "coucou", -1);
-	// char *result = ft_strnstr(haystack, "c", 0);
+	// char *result = ft_strnstr(empty, "coucou", -1);
+	char *result = ft_strnstr(((void *)0), "fake", 3);
+	// result = strnstr(((void *)0), "fake", 3);
 }
 
 // [       `     ]
