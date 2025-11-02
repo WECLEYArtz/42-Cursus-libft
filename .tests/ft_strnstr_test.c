@@ -10,9 +10,8 @@ int	main(void)
 	// char needle[10] = "aabc";
 	// char * empty = (char*)"";
 
-
-	// char *result = ft_strnstr(empty, "coucou", -1);
-	char *result = ft_strnstr(((void *)0), "fake", 3);
+	char *result;
+	result = ft_strnstr(((void *)0), "test", 3);
 	// result = strnstr(((void *)0), "fake", 3);
 }
 

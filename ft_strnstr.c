@@ -20,9 +20,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	if (!*needle)
 		return ((char *)haystack);
-	needle_len = ft_strlen(needle);
-	if (needle_len > len)
+	if (!len)
 		return (0);
+	needle_len = ft_strlen(needle);
 	len_max = len - needle_len + 1;
 	i = 0;
 	while (len_max-- && haystack[i])
