@@ -36,3 +36,6 @@ int main()
 	printf("%d",(result2 == result));
     return 0;
 }
+
+// NEOVIM
+// set mp=make\ -C\ ../\ CC='cc\ -g'\ &&\ cc\ -g\ %\ ../libft.a\ &&\ ./a.out

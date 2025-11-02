@@ -22,7 +22,6 @@ static void	*ft_strtoupper(void *str)
 	}
 	return str;
 }
-static
 
 static void	ft_freelst(void *content)
 {
@@ -40,7 +39,7 @@ int main(void)
 	int lstsize = ft_lstsize(test_lst);
 
 	t_list	*new = ft_lstmap(test_lst, &ft_strtoupper, &ft_freelst);
-	ft_lstclear(&test_lst, ft_freelst)
+	ft_lstclear(&test_lst, ft_freelst);
 }
 
 // set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
