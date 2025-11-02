@@ -40,7 +40,8 @@ int main(void)
 
 	t_list	*new = ft_lstmap(test_lst, &ft_strtoupper, &ft_freelst);
 	ft_lstclear(&test_lst, ft_freelst);
+
 }
 
 // set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
-// cc -g % ../ft_itoa.c && ./a.out
+// cc -g % ../ft_lstiter_bonus.c && ./a.out
