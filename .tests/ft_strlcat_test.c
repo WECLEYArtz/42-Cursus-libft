@@ -30,14 +30,20 @@
 
 int main()
 {
-	char dst[9] = "test";
+	// char dst[9] = "test";
+	char *dst = NULL;
+
 	char *src = "test";
+	// char *src = NULL;
 
 	// ft_strlcat(name, name, (size_t)10);
 	// ft_strlcat(name, name, (size_t)10);
 
-	// printf("name: %s retuen: %zu \n", name, ft_strlcat(name+17, name, (size_t)10));
-	printf("name: %s retuen: %zu \n", dst, strlcat(dst , dst, 5));
+	// printf("name: %s retuen: %zu \n", dst, strlcat(dst , src, 7));
+	// printf("name: %s retuen: %zu \n", dst, ft_strlcat(dst , src, 7));
+
+	// strlcat(dst , src, 0);
+	ft_strlcat(dst , src, 0);
 }
 
 // [55555                         ]	dest_actualsize = 30;

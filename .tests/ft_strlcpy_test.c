@@ -11,18 +11,20 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-
 #include <stdio.h>
 #include <string.h>
 
 int	main(void)
 {
-	char src[] = "coucou";
+	// char src[] = "coucou";
 	char dest[10]; memset(dest, 'A', 10);
 
-	ft_strlcpy(dest, src, 1);
-	// printf("%s\n", dst);
+	char *src = NULL;
+	// char *dest = NULL;
+
+	// ft_strlcpy(dest, src, 1);
+	strlcpy(dest, src, 0);
+	printf("%s\n", dest);
 }
 
 // set mp=cc\ -g\ %\ ../libft.a\ &&\ ./a.out
