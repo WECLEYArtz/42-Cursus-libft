@@ -21,24 +21,26 @@ static int	ft_isspace(int c)
 
 static long	ft_atoi_convert(const char *str, int sign)
 {
-	long			result;
+	long	result;
+
 	result = 0;
 	while (*str && ft_isdigit(*str))
-		if((long)((result * 10) + (long)(*str - '0')) < result)
+	{
+		if ((long)((result * 10) + (long)(*str - '0')) < result)
 		{
-			if(sign == -1 && (*str - '0') > 7)
+			if (sign == -1 && (*str - '0') > 7)
 				return (0);
 			else
 				return (-1);
 		}
 		else
 			result = (result * 10) + (*str++ - '0');
+	}
 	return (result);
 }
 
 int	ft_atoi(const char *str)
 {
-
 	long	result;
 	int		sign;
 
