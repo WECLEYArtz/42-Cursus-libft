@@ -15,10 +15,11 @@
 
 static size_t	ft_better_size(size_t s_len, int start, size_t len)
 {
-	long diff;
+	size_t diff;
 	diff = (s_len - start);
-	if(diff > 0)
-		return ();
+	if(diff < len)
+		return (diff);
+	return (len);
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

@@ -29,12 +29,28 @@ int	main(void)
 
 // cc ft_substr.c ft_calloc.c ft_strlcpy && ./a.out
 //
-// |...............| slen
-// "abcd123xyzballs"
-// |.................................| len
-// .       |.......| start - s_len
-// start = 19
-// len =  400
+// |  ball| slen
+// |......| len
+// |  ....| start - len
+// s_len = 4
+// start = 2
+// len =  6
 //
 //
-// (6) + 12  - 15
+//
+//
+// |    ball| slen
+// |................| len
+// |    ............| start - len
+// s_len = 4
+// start = 2
+// len =  6
+//
+//
+//
+// |   ball| slen
+// |......| len
+// |   ...| start - len
+// s_len = 4
+// start = 3
+// len =  6
