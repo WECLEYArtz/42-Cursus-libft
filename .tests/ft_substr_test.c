@@ -12,15 +12,13 @@ int	main(void)
 
 
 	test = "niggerification";
-	start = 0;
-	len = 42000;
-	result = ft_substr(test, start, len);
-	result = ft_substr("hola", 0, 18446744073709551615);
-	// printf("%s\n", result);
+	// start = 0;
+	// len = 42000;
+	// result = ft_substr(test, start, len);
+	result = ft_substr("hola", 0, -1);
+	printf("%s\n", result);
 	// ft_substr("tripouille", 0, 42000);
 	free(result);
-
-
 }
 
 // NEOVIM
@@ -32,9 +30,10 @@ int	main(void)
 // cc ft_substr.c ft_calloc.c ft_strlcpy && ./a.out
 //
 // |...............| slen
-// "abcd123xyzballs"  = 15 src
-// .       |.......,..............................|
-// start = 0
+// "abcd123xyzballs"
+// |.................................| len
+// .       |.......| start - s_len
+// start = 19
 // len =  400
 //
 //

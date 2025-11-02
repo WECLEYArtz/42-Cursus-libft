@@ -11,15 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 static size_t	ft_better_size(size_t s_len, int start, size_t len)
 {
-	long	diff;
-
-	diff = (start + len) - s_len;
-	if (diff > 0)
-		return (len - diff);
-	return (len);
+	long diff;
+	diff = (s_len - start);
+	if(diff > 0)
+		return ();
 }
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
