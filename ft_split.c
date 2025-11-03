@@ -77,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	while (*s && *s == c)
 		s++;
 	tokken_count = ft_tokkenscount(s, c);
-	mem_ptr_arr = malloc((tokken_count + 1) * sizeof(char **));
+	mem_ptr_arr = malloc((tokken_count + 1) * sizeof(char *));
 	if (!mem_ptr_arr || !ft_allocatetokkens(mem_ptr_arr, s, c))
 		return (ft_abort(mem_ptr_arr));
 	mem_ptr_arr[tokken_count] = NULL;
