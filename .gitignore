@@ -60,3 +60,4 @@ bonus
 # vim / nvim leftovers
 *hidden*
 *.swp
+.gitignore
