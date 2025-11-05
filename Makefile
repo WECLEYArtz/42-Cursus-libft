@@ -68,7 +68,7 @@ clean:
 	rm -f $(OBJ) $(OBJ_B)
 
 fclean: clean
-	rm -f $(NAME) bonus
+	rm -f $(NAME)
 
 re: fclean all
 
