@@ -56,21 +56,19 @@ OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
 
-bonus: $(OBJ_B)
-	$(AR) $(NAME) $^
-	@touch bonus
+bonus: $(OBJ) $(OBJ_B)
 
 $(NAME): $(OBJ)
-	$(AR) $(NAME) $^
 
 %.o: %.c $(HDR)
 	$(CC) $(CFLAGS) $<
+	$(AR) $(NAME) $@
 
 clean: 
 	rm -f $(OBJ) $(OBJ_B)
 
 fclean: clean
-	rm -f $(NAME) bonus
+	rm -f $(NAME)
 
 re: fclean all
 
