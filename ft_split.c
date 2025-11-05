@@ -16,10 +16,13 @@ static void	*ft_abort(char **mem_ptr_arr)
 {
 	size_t	i;
 
-	i = 0;
-	while (mem_ptr_arr[i])
-		free(mem_ptr_arr[i++]);
-	free(mem_ptr_arr);
+	if (mem_ptr_arr)
+	{
+		i = 0;
+		while (mem_ptr_arr[i])
+			free(mem_ptr_arr[i++]);
+		free(mem_ptr_arr);
+	}
 	return (NULL);
 }
 
