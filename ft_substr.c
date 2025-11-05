@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <string.h>
 
-static size_t	ft_better_size(size_t s_len, int start, size_t len)
+static size_t	ft_sani_len(size_t s_len, int start, size_t len)
 {
 	size_t	diff;
 
@@ -27,15 +27,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*mem;
 	size_t	s_len;
+	size_t	sane_len;
 
 	if (!s)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		return (ft_calloc(1, 1));
-	mem = malloc(ft_better_size(s_len, start, len) + 1);
+	sane_len = ft_sani_len(s_len, start, len);
+	mem = malloc(sane_len + 1);
 	if (!mem)
 		return (NULL);
-	ft_strlcpy(mem, &s[start], len + 1);
+	ft_strlcpy(mem, &s[start], sane_len + 1);
 	return (mem);
 }
