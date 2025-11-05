@@ -62,7 +62,7 @@ $(NAME): $(OBJ)
 
 %.o: %.c $(HDR)
 	$(CC) $(CFLAGS) $<
-	$(AR) $(NAME) $^
+	$(AR) $(NAME) $@
 
 clean: 
 	rm -f $(OBJ) $(OBJ_B)
