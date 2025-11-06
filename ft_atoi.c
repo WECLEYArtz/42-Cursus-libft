@@ -28,7 +28,7 @@ static long	ft_atoi_convert(const char *str, int sign)
 	{
 		if ((long)((result * 10) + (long)(*str - '0')) < result)
 		{
-			if (sign == -1 && (*str - '0') > 7)
+			if (sign == -1)
 				return (0);
 			else
 				return (-1);
