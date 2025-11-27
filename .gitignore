@@ -56,7 +56,9 @@ dkms.conf
 *.dwo
 *Test*
 bonus
+main.c
 
 # vim / nvim leftovers
 *hidden*
 *.swp
+.gitignore
