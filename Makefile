@@ -56,7 +56,7 @@ OBJ_B = $(SRC_B:.c=.o)
 
 all: $(NAME)
 
-bonus: $(OBJ) $(OBJ_B)
+bonus: $(OBJ_B)
 
 $(NAME): $(OBJ)
 
