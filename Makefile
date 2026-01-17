@@ -38,7 +38,10 @@ ft_striteri.c \
 ft_putchar_fd.c \
 ft_putstr_fd.c \
 ft_putendl_fd.c \
-ft_putnbr_fd.c
+ft_putnbr_fd.c\
+get_next_line/get_next_line.c\
+get_next_line/get_next_line_utils.c
+
 
 SRC_B=\
 ft_lstnew_bonus.c \
@@ -61,7 +64,7 @@ bonus: $(OBJ_B)
 $(NAME): $(OBJ)
 
 %.o: %.c $(HDR)
-	$(CC) $(CFLAGS) $<
+	$(CC) $(CFLAGS) -o $@ $<
 	$(AR) $(NAME) $@
 
 clean: 

@@ -14,6 +14,17 @@
 
 void	ft_bzero(void *dest, size_t len)
 {
-	if (len)
-		ft_memset(dest, 0, len);
+	long	*dst_l;
+
+	if (!len || !dest)
+		return ;
+	dst_l = (long *)dest;
+	while (len >= sizeof(long))
+	{
+		*(long*)dst_l++ = 0;
+		len -= sizeof(long);
+	}
+	dest = ((char *)dst_l);
+	while (len--)
+		*(char*)dest++ = 0;
 }
