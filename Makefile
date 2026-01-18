@@ -1,4 +1,4 @@
-HDR = libft.h
+HDR = libft.h get_next_line/get_next_line.h
 NAME = libft.a
 CC = cc
 CFLAGS = -c -Werror -Wall -Wextra
