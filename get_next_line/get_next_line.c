@@ -16,8 +16,14 @@ char	*get_next_line(int fd)
 {
 	static char	*buff = NULL;
 
-	if (fd < 0 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
+	if (fd < -1 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
+	if(fd == -1)
+	{
+		free(buff);
+		buff = NULL;
+		return(NULL);
+	}
 	if (!buff)
 	{
 		buff = malloc(BUFFER_SIZE);
