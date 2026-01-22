@@ -18,11 +18,11 @@ char	*get_next_line(int fd)
 
 	if (fd < -1 || fd >= OPEN_MAX || BUFFER_SIZE <= 0)
 		return (NULL);
-	if(fd == -1)
+	if (fd == -1)
 	{
 		free(buff);
 		buff = NULL;
-		return(NULL);
+		return (NULL);
 	}
 	if (!buff)
 	{
@@ -65,8 +65,7 @@ char	*gnl_engine(int fd, char **buff)
 	}
 }
 
-char	*join_ln_cp(char *line, char **buff, size_t *line_len,
-		size_t *copy_len)
+char	*join_ln_cp(char *line, char **buff, size_t *line_len, size_t *copy_len)
 {
 	size_t	i;
 	char	*new_line;
